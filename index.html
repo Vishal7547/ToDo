@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <h1 class="todo">Todo List App</h1>
+    <div id="container">
+      <input placeholder="Type your todo list"  class="add-task add-bg add-2-bg" id="add" data-helloWord="asdasdas" />
+      <img src="icons/add.png" alt="add_task" id="add_icon">
+      <div class="task_info">
+        <div class="some-info">
+            <span>
+                <i class="bi bi-check2-all"></i>
+                Completed
+            </span> 
+        </div>
+        <div class="some-info">
+            <span>Clear completed</span>
+        </div>
+      </div>
+
+     
+      <ul id="list">
+        <!-- data fetch from event.js -->
+        <!-- <li>
+          <input  type="checkbox"  id="task1" data-id="12" class="custom-checkbox">
+          <label for="task1">Buy groceries</label>
+          <img src="https://icons-for-free.com/download-icon-remove+icon-1320184982863027796_512.png" class="delete" data-id="12" />
+        </li> -->
+      </ul>
+
+
+      <div class="task_track">
+        <div class="completed_orNot">
+            <span id="total-tasks"><span id="tasks-counter">0</span> task left</span>
+        </div>
+        <div class="completed_orNot">
+            <span id="all">All</span><span id="uncompleted"> Uncompleted </span><span id="completed">Completed</span>
+        </div>
+      </div>
+    </div>
+<!-- javascript link -->
+<script src="event/event.js"></script>
+</body>
+</html>

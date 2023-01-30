@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color:rgb(212,214,221);
+
+ /* css for heading of project */
+}
+.todo{
+    font-size: 3rem;
+    margin: 50px 0;
+   color:white;
+   font-weight: 800;
+}
+
+/* container */
+
+#container {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 10px 10px 50px grey;
+    position: relative;
+  }
+  #add_icon{
+    height: 38px;
+    width:38px;
+    position: absolute;
+    top:48px;
+    right: 40px;
+    display: none;
+  }
+  /* upper input box */
+  .task_info{
+    margin: 15px 0;
+    width:100%;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(95, 94, 94,0.5);
+    
+  }
+  .task_info .some-info span{
+    color:grey;
+    font-weight: 400;
+    font-size: 19px;
+  }
+  .task_info .some-info span i{
+    font-size: 25px;
+  }
+  .add-task{
+    background-color:rgb(238,238,238);
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    outline: none;
+    font-size: 15px;
+    padding: 11px;
+    padding-left: 40px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+  }
+  ::placeholder{
+    font-size: 30px;
+  }
+  /* background image of input field */
+  .add-bg{
+    background-image: url('../icons/saveText.png');
+    background-repeat:no-repeat;
+    background-size: 40px;
+    background-position: 0px 50%;
+  } 
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid #e5e5e5; */
+  }
+  ul li {
+    padding: 10px;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+  }
+ 
+  #list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+ 
+  
+  #list label {
+    position: relative;
+    cursor: pointer;
+ 
+  }
+ 
+  
+  #list label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  #list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  #list input:checked + label:before {
+    background: #0079bf;
+  } 
+
+  #list input:checked + label {
+    text-decoration: line-through;
+  }
+  .delete {
+      height: 40px;
+      padding: 5px 0px;
+ 
+
+  }
+  .delete:hover {
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+  }
+ 
+  #total-tasks {
+    margin-bottom: 20px;
+    font-size: 19px;
+      margin-left: 2px;
+      color: gray;
+  }
+
+  /* completed uncompleted and all task show button */
+  .task_track{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+      
+  .task_track .completed_orNot span{
+    font-size: 19px;
+  }
+  #completed,#uncompleted{
+    color:grey;
+  }
+  #completed,#uncompleted,#all{
+    cursor: pointer;
+  }
+
+  /* media-query at 616px */
+  @media screen  and (max-width:616px){
+   #container{
+    width:80%;
+   }
+  }
+  /* media query at 512px */
+
+  @media screen  and (max-width:512px){
+    #container{
+     width:90%;
+    }
+
+    .task_track .completed_orNot span{
+        font-size: 15px;
+      }
+      #total-tasks {
+       
+        font-size: 15px;
+          
+      }
+      .delete {
+        height: 30px;
+      
+    }
+
+    .todo{
+        font-size: 2.5rem;
+    }
+    
+  
+   
+      .task_info .some-info span{
+       
+        font-size: 15px;
+      }
+      .task_info .some-info span i{
+        font-size: 20px;
+      }
+    
+   }
+
+   @media screen and (max-width:400px){
+    #all,#completed,#uncompleted{
+       display: block;
+       margin-top: 3px;
+    }
+
+    #add_icon{
+        height: 30px;
+        width:30px;
+      }
+      ::placeholder{
+        font-size: 15px;
+      }
+
+      .add-bg{
+        background-size: 30px;
+      } 
+      .add-task{
+        height:60px;
+      }
+   }
